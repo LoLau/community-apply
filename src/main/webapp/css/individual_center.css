@@ -1,0 +1,68 @@
+/*个人中心*/
+.feature-divider {
+    margin: 20px 0;
+}
+h3{
+    padding: 0px 35px;
+}
+#individual_center{
+	width:980px;
+}
+#applyStatus{
+	width:980px;
+}
+/*个人中心信息*/
+.preview_list li label {
+    line-height: 22px;
+    display: block;
+    width: 138px;
+    height: 22px;
+    float: left;
+    cursor: default;
+}
+
+.info_preview .preview_list {
+    padding: 20px 0 8px;
+    font-size: larger;
+}
+.info_preview .preview_list .preview_option {
+    line-height: 22px;
+    margin-left: 120px;
+}
+
+.info_preview .preview_list ul {
+    margin-bottom: 14px;
+}
+.info_preview .preview_list li {
+    margin-bottom: 10px;
+    overflow: hidden;
+    *zoom: 1;
+}
+li {
+    list-style: none;
+}
+.info_preview .preview_list li label {
+    line-height: 22px;
+    display: block;
+    width: 138px;
+    height: 22px;
+    float: left;
+    cursor: default;
+}
+label {
+    cursor: pointer;
+}
+.info_preview .preview_list .preview_option {
+    line-height: 22px;
+    margin-left: 120px;
+}
+
+.summary {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.table{
+    width:65%;
+    margin: 30px 30px;
+    font-size: 15px;
+}

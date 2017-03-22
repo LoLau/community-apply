@@ -1,0 +1,72 @@
+
+/* Custom Styles */
+
+.ct-con{
+    border:1px solid #cadae7;
+    background:#FAFDFF;
+    overflow:hidden;
+    height:180px;
+}
+#myScrollspy2{
+    border:1px solid #cadae7;
+    background:#FAFDFF;
+    overflow:hidden;
+    margin:10px 0;
+    height:655px;
+}
+.ct-con2{
+    border:1px solid #cadae7;
+    background:#FAFDFF;
+    overflow:hidden;
+    margin:10px 0;
+    height:200px;
+}
+
+#com_1{padding-top: 30px;
+    padding-bottom: 5px;
+    width:1020px;}
+
+/*鏂伴椈*/
+#newslist{ padding:15px 20px;}
+#newslist p{ padding:6px 10px;font-size:18px; margin:0 10px;text-indent:2em;}
+#newslist h2{ padding:6px 10px;font-size:24px; text-align: center;}
+#newslist li a{ font-size:14px; margin-right:5px;}
+#newslist li span{ float:right; color:#aaa;}
+#newslist li p{ color:#aaa;}
+
+div.container.summary{width:1050px;}
+.feature-divider {
+    margin: 20px 0;
+}
+/*鍒楄〃妯″潡*/
+.br-bg{  border:1px solid #cadae7;}
+
+/*鍐呴〉渚ф爮*/
+.sidebar{ margin-top:15px;}
+.sidebar .sb_nav{ float:left; width:230px; position:relative;}
+div.ti1-bg{ position:absolute; width:225px; height:34px; background:url(../images/leftti.png) no-repeat; overflow:hidden;zoom:1;z-index:1;}
+div.ti1-bg span{ display:block; width:170px; overflow:hidden; margin-left:30px;line-height:30px; font-size:14px; font-weight:bold; color:#fff;}
+.sidebar .sb_nav h3.title1{ border:1px solid #D3E1ED; background:#FAFDFF; border-bottom:none; height:38px; line-height:48px; overflow:hidden;zoom:1;}
+.sidebar .sb_nav h3.title2{ height:30px; line-height:30px; border:1px solid #D3E1ED; background:#FAFDFF; padding-left:22px; overflow:hidden; font-size:14px; color:#333;font-weight: bold;}
+.sidebar .sb_nav h3.line{ margin-top:10px; }
+.sidebar .sb_nav .active{ padding:0px 15px 15px 15px; background:#FAFDFF;border:1px solid #D3E1ED; border-top:none;zoom:1;}
+.sidebar .sb_nav .ct-con{ padding-top:10px; color:#666;}
+.sidebar .ct-con{ line-height:2; color:#333;}
+.sidebar .ct-con ul,.sidebar .ct-con ol{ padding:0px 0px 0px 25px; margin:0px;}
+.sidebar .ct-con a{ color:#1C57C4; text-decoration:underline;}
+#sidebar dl{ margin-left:5px;}
+#sidebar dl dt{ padding:4px 0px 5px 15px;}
+#sidebar dl dt a{font-size:14px; color:#666;}
+#sidebar dl dt a:hover{color:#09F;}
+#sidebar dl dd{ padding:0px 0px 0px 15px;}
+#sidebar dl dd h4{ font-weight:normal; padding:5px 0px 5px 10px;}
+#sidebar dl dt.on a{ font-weight:bold; color:#11578b; }
+#sidebar dl h4.on a{ font-weight:bold;}
+.sidebar .sb_box{ float:right; width:751px;height:auto; background:#fff; overflow:hidden; background:#FAFDFF;}
+.sidebar .sb_box h3.title{ border-bottom:1px solid #cce6f5;height:35px; line-height:35px; position:relative;}
+.sidebar .sb_box h3.title span{ position:absolute; left:0px; top:-1px; font-size:14px; border-bottom:2px solid #69CBF1; padding:0px 15px; color:#2d648f;}
+.sidebar .sb_box h3.title div.position{ float:right; font-weight:normal; position:relative; top:3px; right:15px; color:#000;}
+.sidebar .sb_box h3.title div.position a{ color:#666;}
+.sidebar .sb_box h3.title div.position a:hover{ text-decoration:underline;}
+
+/*绀惧洟绠�粙*/

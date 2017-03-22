@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="hust.community">
+
+	<resultMap type="com.hust.entity.Community" id="Community">
+		<!-- column与数据库中的列对应，property与实体类中的属性对应 -->
+		<id column="community_id" property="community_id"/>
+		<result column="name" property="name"/>
+		<result column="type" property="type"/>
+		<result column="intro" property="intro"/>
+		<result column="current_situation" property="current_situation"/>
+		<result column="status" property="status"/>
+		<result column="pos_id" property="pos_id"/>
+	</resultMap> 
+	
+	<select id="selectAllCommunity" resultType="hashmap">
+		select distinct community_id, name, type,src_path,intro,current_situation,create_time from community order by create_time desc limit #{curRow},#{pageSize}
+	</select>
+	
+	<select id="selectCountCommunity" resultType="int">
+		select count(*) from community
+	</select>
+	
+	<select id="selectRecruitList" resultType="hashmap">
+		select recruit_id,community.community_id,name,content from community left outer join recruit on community.community_id = recruit.community_id order by create_time desc limit #{curRow},#{pageSize}
+	</select>
+	
+	<select id="selectCommunityByName" resultType="hashmap" parameterType="String">
+		select name from community where name=#{name}
+	</select>
+	
+	<select id="selectCommunityById" resultMap="Community" parameterType="int">
+		select community_id,name,type,intro,current_situation from community where community_id=#{id}
+	</select>
+	
+	<insert id="insertCommunity" parameterType="com.hust.entity.Community">
+		insert into community(name,src_path,type,intro,current_situation,create_time) values(#{name},#{src_path},#{type},#{intro},#{current_situation},#{create_time})
+	</insert>
+	
+	<delete id="deleteCommunityById" parameterType="int">
+		delete from community where community_id=#{id}
+	</delete>
+	
+	<update id="updateCommunity" parameterType="hashmap">
+		update community set name=#{name},type=#{type},intro=#{intro},current_situation=#{current_situation} where community_id=#{community_id}
+	</update>
+	
+	<select id="getSrcPathById" resultType="String" parameterType="int">
+		select src_path from community where community_id=#{id}
+	</select>
+	
+	<insert id="addRecruit" parameterType="com.hust.entity.Recruit">
+		insert into recruit(community_id,content) values(#{community_id},#{content})
+	</insert>
+	
+	<select id="getRecruitByCommunityId" parameterType="int" resultType="com.hust.entity.Recruit">
+		select * from recruit where community_id=#{id}
+	</select>
+	
+	<select id="selectCountRecruit" resultType="int">
+		select count(*) from (select recruit_id,community.community_id,name,content from community left outer join recruit on community.community_id = recruit.community_id)t
+	</select>
+	
+	<delete id="deleteRecruitById" parameterType="int">
+		delete from recruit where community_id=#{id}
+	</delete>
+	
+	<select id="selectUserStatus" parameterType="int" resultType="com.hust.entity.Community">
+		SELECT * FROM community WHERE user_id = #{id}
+	</select>
+</mapper>

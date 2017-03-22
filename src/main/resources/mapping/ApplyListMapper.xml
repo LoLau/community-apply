@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="hust.applyHandel">
+
+	<resultMap type="com.hust.entity.Application" id="Application">
+		<!-- column与数据库中的列对应，property与实体类中的属性对应 -->
+		<id column="apply_id" property="apply_id"/>
+		<result column="community_id" property="community_id"/>
+		<result column="user_id" property="user_id"/>
+		<result column="apply_table_id" property="apply_table_id"/>
+		<result column="apply_time" property="apply_time"/>
+		<result column="status" property="status"/>
+	</resultMap> 
+	
+	<select id="selectAllApplyList" resultType="hashmap">
+		select apply.community_id community_id, community.name community_name, apply.user_id user_id,
+		user.name username,apply.apply_id apply_id, apply.apply_time apply_time,apply_table.apply_pos pos,apply.status status 
+		from apply, community, user, apply_table
+		where apply.user_id = user.user_id and apply.community_id = community.community_id and apply_table.apply_table_id = apply.apply_table_id
+		limit #{curRow},#{pageSize}
+	</select>
+	
+	<select id="selectCountApply" resultType="int">
+	    select count(*) from apply;
+	</select>
+	
+	<select id="selectApplyById" resultMap="Application" parameterType="int">
+	      select apply_id,community_id,user_id,apply_table_id,apply_time,status from apply where apply_id =#{id}
+	</select>
+	
+	<update id="updateApply" parameterType="hashmap">
+	   update apply set status =#{status} where apply_id =#{apply_id}
+	</update>
+	
+	<select id="selectStatus" parameterType="int" resultType="com.hust.entity.Application">
+		SELECT * FROM apply WHERE user_id = #{id}
+	</select>
+
+	
+</mapper>

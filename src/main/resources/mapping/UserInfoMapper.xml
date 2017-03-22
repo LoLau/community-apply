@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="hust.userInfo">
+	<select id="selectByUserId" resultType="com.hust.entity.User" parameterType="int">
+	    select user_id,username,name,sex,age,academy,major from user where user_id =#{user_id}
+	</select>
+	
+	<select id="selectUseId" resultType="int" parameterType="int">
+	    select user_id from apply where apply_id = #{apply_id}
+	</select>
+</mapper>

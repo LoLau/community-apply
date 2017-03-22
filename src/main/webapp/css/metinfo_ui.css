@@ -1,0 +1,157 @@
+@charset "utf-8";
+/*初始化*/
+h1, h2, h3, h4, h5, h6, dl, dt, li, dd, th, td, pre, form, input, button, textarea, hr {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+}
+
+img {
+    border: 0;
+}
+
+button, input, select, textarea {
+    font-size: 100%;
+}
+
+ul, ol {
+    padding-left: 40px;
+}
+
+.clear {
+    clear: both;
+}
+
+.list-none {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.editor {
+    line-height: 2;
+    color: #333;
+    position:relative;
+    overflow-y: scroll;
+    overflow-x: auto;
+    padding:10px 10px;
+    width:751px;
+    bottom:10px;
+    top: 10px;
+    margin:0 auto;
+    height:auto;
+}
+
+.editor ul, .editor ol {
+    padding: 0px 0px 0px 25px;
+    margin: 0px;
+}
+
+.editor a {
+    color: #1C57C4;
+    text-decoration: underline;
+}
+
+/*翻页*/
+#flip {
+    margin-bottom: 15px;
+}
+
+/*简介模块*/
+#showtext {
+    padding: 15px;
+    line-height: 2;
+}
+
+/*文章模块*/
+
+
+#shownews {
+    padding: 0px 15px 15px;
+}
+
+#shownews .editor {
+    line-height: 2;
+    padding: 0px 10px;
+    font-size: 14px;
+}
+
+#shownews h1 {
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 1px dotted #ccc;
+    padding: 5px 0px;
+    margin: 10px 0px;
+    color: #333;
+}
+
+#shownews .editor p {
+    text-indent: 32px;
+    font-size: 16px;
+    font-family: 宋体;
+}
+
+/*翻页样式*/
+.metpager_1 {
+    text-align: center;
+}
+
+.metpager_2 {
+    text-align: center;
+}
+
+.metpager_3 {
+    text-align: center;
+}
+
+.digg4 {
+    padding: 3px;
+    margin: 3px;
+    text-align: center;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.digg4 a, .digg4 span.miy {
+    margin: 2px;
+    text-decoration: none;
+}
+
+.digg4 .disabledfy {
+    font-family: Tahoma, Verdana;
+}
+
+.metpager_8 a, .metpager_8 span.miy {
+    border: 1px solid #ddd;
+    padding: 2px 5px 2px 5px;
+    color: #aaa;
+}
+
+.metpager_8 a:hover {
+    border: 1px solid #a0a0a0;
+}
+
+.metpager_8 a:active {
+    border: 1px solid #ff9600;
+    color: #ff6500;
+    background-color: #ffc794;
+}
+
+.metpager_8 span.current {
+    border: 1px solid #e0e0e0;
+    padding: 2px 5px 2px 5px;
+    margin: 2px;
+    color: #aaa;
+    background-color: #f0f0f0;
+    text-decoration: none;
+}
+
+.metpager_8 span.disabled {
+    border: 1px solid #f3f3f3;
+    padding: 2px 5px 2px 5px;
+    margin: 2px;
+    color: #ccc;
+}

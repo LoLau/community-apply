@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="hust.position">
+
+	<resultMap type="com.hust.entity.CommunityPosition" id="CommunityPosition">
+		<!-- column与数据库中的列对应，property与实体类中的属性对应 -->
+		<id column="pos_id" property="pos_id"/>
+		<result column="pos_name" property="pos_name"/>
+		<result column="user_id" property="user_id"/>
+		<result column="community_id" property="commmunity_id"/>
+	</resultMap>
+	<insert id="insertPosistion" parameterType="com.hust.entity.CommunityPosition">
+	    insert into position (pos_name,user_id,community_id) values(#{pos_name},#{user_id},#{community_id}) 
+	</insert> 
+</mapper>
+	

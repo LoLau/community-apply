@@ -1,0 +1,51 @@
+body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #eee;
+}
+#registerArea{
+    width:580px;
+}
+input,select{
+    margin:10px 0;
+}
+button{
+    margin:5px 0;
+}
+label{
+   margin:16px 0;
+}
+.registerbox {
+    max-width: 530px;
+    padding: 15px;
+    margin: 10px auto;
+}
+.registerbox .form-signin-heading,
+.registerbox .checkbox {
+    margin-bottom: 10px;
+}
+.registerbox .checkbox {
+    font-weight: normal;
+}
+.registerbox .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+.registerbox .form-control:focus {
+    z-index: 2;
+}
+.registerbox input[type="text"] {
+    margin-bottom: 1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.registerbox input[type="password"] {
+    margin-bottom: 1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}

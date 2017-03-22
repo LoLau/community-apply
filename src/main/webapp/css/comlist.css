@@ -1,0 +1,56 @@
+/*社团列表模块*/
+.position {
+    float:right;
+    font-weight: normal;
+    position: relative;
+    top: -10px;
+    right: 15px;
+    color: #000;
+}
+.position a {
+    color: #666;
+}
+.feature-divider {
+    margin: 10px 0;
+}
+.list-none{ list-style:none; padding:0px; margin:0px;}
+.jumbotron{padding-top: 30px;
+    padding-bottom: 20px;}
+
+/*新闻*/
+#newslist{ padding:15px 20px;}
+#newslist li{ padding:6px 10px;}
+#newslist li a{ font-size:14px; margin-right:5px;}
+#newslist li span{ float:right; color:#aaa;}
+#newslist li p{ color:#aaa;}
+
+div.container.summary{width:1005px;}
+/*列表模块*/
+ .br-bg{  border:1px solid #cadae7;}
+.sb_box a{font-weight: bold;}
+ .sb_box{ float:right; width:980px; background:#fff; overflow:hidden; }
+ .sb_box h3.title{ border-bottom:1px solid #cce6f5;height:35px; line-height:35px; position:relative;}
+ .sb_box h3.title span{ position:absolute; left:0px; top:-1px; font-size:14px; border-bottom:2px solid #69CBF1; padding:0px 15px; color:#2d648f;}
+ .sb_box h3.title div.position{ float:right; font-weight:normal; position:relative; top:3px; right:15px; color:#000;}
+ .sb_box h3.title div.position a{ color:#666;}
+ .sb_box h3.title div.position a:hover{ text-decoration:underline;}
+
+
+
+/*翻页*/
+#flip{ margin-bottom:15px;}
+/*翻页样式*/
+.metpager_1{ text-align:center;}
+.metpager_2{ text-align:center;}
+.metpager_3{ text-align:center;}
+
+.digg4{ padding:3px; margin:3px; text-align:center; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; }
+.digg4 a,.digg4 span.miy{ margin:2px; text-decoration:none;}
+.digg4 .disabledfy{ font-family: Tahoma, Verdana;}
+
+.metpager_8 a,.metpager_8 span.miy{ border:1px solid #ddd; padding:2px 5px 2px 5px; color:#aaa;}
+.metpager_8 a:hover { border:1px solid #a0a0a0; }
+.metpager_8 a:hover { border:1px solid #a0a0a0; }
+.metpager_8 span.current {border:1px solid #e0e0e0; padding:2px 5px 2px 5px; margin:2px; color:#aaa; background-color:#f0f0f0; text-decoration:none;}
+.metpager_8 span.disabled { border:1px solid #f3f3f3; padding:2px 5px 2px 5px; margin:2px; color:#ccc;}
+

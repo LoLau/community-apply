@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="hust.application">
+	
+	<select id="isExistUser" resultType="hashmap" parameterType="com.hust.entity.Application">
+		select * from apply where user_id=#{user_id} and community_id=#{community_id}
+	</select>
+	
+	<select id="isExistUser1" resultType="int" parameterType="com.hust.entity.Application">
+		select max(apply_table_id) from apply where user_id=#{user_id} and community_id=#{community_id}
+	</select>
+	
+	<select id="isExistUser2" resultType="int" parameterType="int">
+		select status from apply where apply_table_id=#{apply_table_id}
+	</select>
+	
+	<select id="showApplyResult" resultType="int" parameterType="String">
+		select status from apply where user_id=(select user_id from user where username=#{username}) 
+	</select>
+	
+	<insert id="insertApplyJob" parameterType="String">
+		insert into apply_table(apply_pos) values(#{applyJob})
+	</insert>
+	
+	<select id="searchMaxId" resultType="int">
+		select max(apply_table_id) from apply_table
+	</select>
+	
+	<select id="searchUserId" parameterType="String" resultType="int">
+		SELECT user_id FROM user WHERE username = #{userName}
+	</select>
+	
+	<select id="searchCommunityId" parameterType="String" resultType="int">
+		select community_id from community where name=#{communityName}
+	</select>
+	
+	<insert id="insertApply" parameterType="com.hust.entity.Application">
+		insert into apply(community_id,user_id,apply_table_id,apply_time,status) values(#{community_id},#{user_id},#{apply_table_id},#{apply_time},#{status})
+	</insert>
+	
+	<select id="selectTotalApply" resultType="int" parameterType="String">
+		select count(*) from apply where user_id = (select user_id from user where username=#{username})
+	</select>
+	
+	<select id="selectApplyByName" resultType="hashmap">
+		select distinct apply_id,community_id,user_id,apply_table_id,apply_time,status from apply limit #{curRow},#{pageSize}
+	</select>
+	
+	<delete id="cancelmemberbyid" parameterType="Map">
+		update apply set status = 0 where community_id=(select community_id from community where name=#{communityName}) and user_id=(select user_id from user where username=#{username})
+	</delete>
+	
+	<select id="getUsernameById" parameterType="int" resultType="String">
+		select username from user where user_id=#{user_id}
+	</select>
+</mapper>
